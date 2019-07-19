@@ -1,3 +1,5 @@
+const $ = require('jquery');
+
 /**
  * es6 modules and imports
  */
@@ -18,3 +20,14 @@ getMovies().then((movies) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.')
   console.log(error);
 });
+
+const url = '../db.json';
+const options = {
+  method: 'GET',
+  movies: {
+    'title':
+    'rating':
+    'id':
+  }
+};
+fetch(url, options)
