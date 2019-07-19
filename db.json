@@ -9,6 +9,31 @@
       "title": "Star Wars: A New Hope",
       "rating": "5",
       "id": 2
+    },
+    {
+      "title": "The Dark Knight",
+      "rating": "5",
+      "id": 3
+    },
+    {
+      "title": "The Godfather",
+      "rating": "5",
+      "id": 4
+    },
+    {
+      "title": "Schindler's List",
+      "rating": "5",
+      "id": 5
+    },
+    {
+      "title": "The Lion King (2019)",
+      "rating": "2",
+      "id": 6
+    },
+    {
+      "title": "The Last Airbender",
+      "rating": "1",
+      "id": 7
     }
   ]
 }
