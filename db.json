@@ -13,7 +13,9 @@
     {
       "title": "The Dark Knight",
       "rating": "5",
-      "id": 3
+      "id": 3,
+      "editMovie": "The Dark Knight",
+      "editRating": "star"
     },
     {
       "title": "The Godfather",
@@ -34,6 +36,11 @@
       "title": "The Last Airbender",
       "rating": "1",
       "id": 7
+    },
+    {
+      "title": "John Wick",
+      "rating": "4",
+      "id": 8
     }
   ]
 }

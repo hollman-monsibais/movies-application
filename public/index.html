@@ -3,23 +3,57 @@
 <head>
     <meta charset="UTF-8" />
     <title>My Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-
-    <div class="container">
+<div class= "container">
         <h1>Hello There!</h1>
         <p>Loading! Please Wait. Hi</p>
-    </div>
-    <div id="movies">
-<!--    <table>-->
-<!--        <tr>-->
-<!--            <th>Movies</th>-->
-<!--            <th>Rating</th>-->
-<!--        </tr>-->
-<!--    </table>-->
-    </div>
+        <form method="POST">
+            <label for="movieName">Enter a Movie Title</label>
+            <input id="movieName" type="text">
+            <label for="movieRating">Select a Rating</label>
+            <select id="movieRating" name="movieRating">
+                <option class="star" value="1">One Star</option>
+                <option class="star" value="2">Two Stars</option>
+                <option class="star" value="3">Three Stars</option>
+                <option class="star" value="4">Four Stars</option>
+                <option class="star" value="5">Five Stars</option>
+            </select>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+        <form>
+            <label for="editMovies">Select a Movie to Edit</label>
+            <select name="editMovies" id="editMovies"></select>
 
+            <label for="editRating">Select a New Star Rating</label>
+            <select id="editRating" name="editRating">
+                <option class="star" value="1">One Star</option>
+                <option class="star" value="2">Two Stars</option>
+                <option class="star" value="3">Three Stars</option>
+                <option class="star" value="4">Four Stars</option>
+                <option class="star" value="5">Five Stars</option>
+            </select>
+            <button id="editSubmit" type="submit" disabled>Submit</button>
+        </form>
+        <form>
+            <label for="removeMovies">Select a Movie to Remove</label>
+            <select id="removeMovies" name="removeMovies"></select>
+            <button id="removeSubmit" type="submit">Submit</button>
+        </form>
+        <table>
+            <tr>
+                <th>Movies</th>
+                <th>Rating</th>
+            </tr>
+            <tr id="movies">
+            </tr>
+        </table>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
 </body>
 </html>
