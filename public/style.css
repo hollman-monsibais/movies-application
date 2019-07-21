@@ -8,3 +8,6 @@ html, body {
     transform: translateY(-80%);
     text-align: center;
 }
+.hide-on-load{
+    display: none;
+}
