@@ -16,7 +16,8 @@ let editRating;
 let removeMovie;
 
 //populates Movie List
-getMovies().then((movies) => {
+const movies = () =>
+  getMovies().then((movies) => {
   // console.log('Here are all the movies:');
   $('#movies').html ("");
   let movieList = "";
@@ -29,7 +30,7 @@ getMovies().then((movies) => {
   });
   $(movieList).appendTo('#movies')
 }).catch((error) => {
-  alert('Oh no! Something went wrong.\nCheck the console for details.')
+  alert('Oh no! Something went wrong.\nCheck the console for details.');
   console.log(error);
 });
 movies();
@@ -37,7 +38,7 @@ movies();
 //Movie rating function
 $("select#movieRating").change(function(){
   movieRating = $(this).children("option:selected").val();
-  movieRating.then($("#submit"));
+  movieRating.then($("#submit").removeAttr("disabled"));
 });
 
 //editing star ratings
@@ -48,13 +49,13 @@ $("select#editRating").change(function(){
 //updating movie list
 $('#submit').click(function(e){
   e.preventDefault();
-  const movieTitle = $('movieName').val();
+  const movieTitle = $('#movieName').val();
   const submittedMovies = {
-    movieTitle,
-    movieRating
+    title: movieTitle,
+    rating: movieRating
   };
   const url = '/api/movies';
-  const option = {
+  const options = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -64,7 +65,7 @@ $('#submit').click(function(e){
   fetch(url, options)
       .then(movies)
       .then(editMovies)
-      .then(deleteMovies);
+      .then(removeMovies);
   $('#movieName').val('');
   $('#movieRating').val('');
 });
@@ -79,9 +80,9 @@ const editMovies = () =>
       movies.forEach(({title, rating}) => {
         movieEdit += `<option value="${title}">${title}</option>`;
       });
-      $(movieEdit).appendTo('#editMovies').then($("#editSubmit"))
+      $(movieEdit).appendTo('#editMovies').then($("#editSubmit").removeAttr("disabled"))
     })
-    //for movies option
+    //for editing movies option
         .then($("select#editMovies").change(function(){
           editMovie = $(this).children('option:selected').val();
           console.log(editMovie)
@@ -90,6 +91,79 @@ const editMovies = () =>
           console.log(error);
         });
 editMovies();
+
+//update with new rating
+$('#editSubmit').click(function (e) {
+  e.preventDefault();
+  getMovies().then((moviesData) => {
+    moviesData.forEach(({title, rating, id}) => {
+      if (editMovie ===  title) {
+        const submittedMovies = {
+          title: editMovie,
+          rating: editRating,
+        };
+        const url = '/api/movies/' + id;
+        const options = {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(submittedMovies)
+        };
+        fetch(url, options)
+            .then(movies)
+            .then(editMovies)
+            .then(removeMovies);
+      }
+    });
+  });
+});
+
+//Movie deletion
+const removeMovies = () =>
+    getMovies().then((movies) => {
+      $('#removeMovies').html('');
+      let movieDelete = "<option>Select the Movie You Want to Remove</option>";
+      movies.forEach(({title, rating, id}) => {
+        movieDelete += `<option value="${title}">${title}</option>`;
+      });
+      $(movieDelete).appendTo('#removeMovies').then(('#removeSubmit'))
+    })
+        .then($("select#removeMovies").change(function(){
+          removeMovie = $(this).children('option:selected').val();
+          console.log(removeMovie)
+        }))
+        .catch((error) => {
+          console.log(error);
+        });
+removeMovies();
+
+//removal on submit
+$('#removeSubmit').click(function(e){
+  e.preventDefault();
+  getMovies().then((moviesData) => {
+    moviesData.forEach(({title, rating, id}) => {
+      if (removeMovie === title) {
+        const submittedMovies = {
+          title: title,
+          rating: rating
+        };
+        const url = '/api/movies/' + id;
+        const options = {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(submittedMovies)
+        };
+        fetch(url, options)
+            .then(movies)
+            .then(editMovies)
+            .then(removeMovies);
+      }
+    })
+  })
+});
 
 
 

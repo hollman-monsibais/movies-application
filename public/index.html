@@ -22,7 +22,7 @@
                 <option class="star" value="4">Four Stars</option>
                 <option class="star" value="5">Five Stars</option>
             </select>
-            <button id="submit" type="submit">Submit</button>
+            <button id="submit" type="submit" disabled>Submit</button>
         </form>
         <form>
             <label for="editMovies">Select a Movie to Edit</label>
@@ -30,17 +30,17 @@
 
             <label for="editRating">Select a New Star Rating</label>
             <select id="editRating" name="editRating">
-                <option value="star" class="1">One Star</option>
-                <option value="star" class="2">Two Stars</option>
-                <option value="star" class="3">Three Stars</option>
-                <option value="star" class="4">Four Stars</option>
-                <option value="star" class="5">Five Stars</option>
+                <option class="star" value="1">One Star</option>
+                <option class="star" value="2">Two Stars</option>
+                <option class="star" value="3">Three Stars</option>
+                <option class="star" value="4">Four Stars</option>
+                <option class="star" value="5">Five Stars</option>
             </select>
-            <button id="editSubmit" type="submit">Submit</button>
+            <button id="editSubmit" type="submit" disabled>Submit</button>
         </form>
         <form>
-            <label for="removeMovie">Select a Movie to Remove</label>
-            <select id="removeMovie" name="removeMovie"></select>
+            <label for="removeMovies">Select a Movie to Remove</label>
+            <select id="removeMovies" name="removeMovies"></select>
             <button id="removeSubmit" type="submit">Submit</button>
         </form>
         <table>
