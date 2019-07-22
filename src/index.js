@@ -14,19 +14,35 @@ let editMovie;
 let movieRating;
 let editRating;
 let removeMovie;
+let movieGenre;
+let editGenre;
+
+$("#remove-on-load").ajaxComplete(function(){
+    $("#remove-on-load").css("display", "none");
+});
+
+//backup removal
+
+// setTimeout(function(){
+//     $('#remove-on-load').remove();
+// }, 3700);
 
 //populates Movie List
 const movies = () =>
   getMovies().then((movies) => {
   // console.log('Here are all the movies:');
   $('#movies').html ("");
-  let movieList = "";
-  movies.forEach(({title, rating, id}) => {
+  let movieList = " <tr>\n" +
+      "<th>Movies</th>\n" +
+      "<th>Rating</th>\n" +
+      "<th>Genre</th>\n" + "</tr>";
+  movies.forEach(({title, rating, genre, id}) => {
         movieList += '<tr>';
           movieList += `<td>${title}</td>`;
           movieList += `<td>${rating}</td>`;
+          movieList += `<td>${genre}</td>`;
         movieList += '</tr>';
-    console.log(`id#${id} - ${title} - rating: ${rating}`);
+    console.log(`id#${id} - ${title} - rating: ${rating} -genre ${genre}`);
   });
   $(movieList).appendTo('#movies')
 }).catch((error) => {
@@ -46,13 +62,24 @@ $("select#editRating").change(function(){
   editRating = $(this).children("option:selected").val();
 });
 
+//adding genre
+$("select#movieGenre").change(function(){
+    movieGenre = $(this).children("option:selected").val();
+});
+
+//editing genre
+$("select#editGenre").change(function(){
+    editGenre = $(this).children("option:selected").val();
+});
+
 //updating movie list
 $('#submit').click(function(e){
   e.preventDefault();
   const movieTitle = $('#movieName').val();
   const submittedMovies = {
     title: movieTitle,
-    rating: movieRating
+    rating: movieRating,
+      genre: movieGenre
   };
   const url = '/api/movies';
   const options = {
@@ -68,6 +95,7 @@ $('#submit').click(function(e){
       .then(removeMovies);
   $('#movieName').val('');
   $('#movieRating').val('');
+  $('#movieGenre').val('');
 });
 
 
@@ -96,11 +124,12 @@ editMovies();
 $('#editSubmit').click(function (e) {
   e.preventDefault();
   getMovies().then((moviesData) => {
-    moviesData.forEach(({title, rating, id}) => {
+    moviesData.forEach(({title, rating, genre, id}) => {
       if (editMovie ===  title) {
         const submittedMovies = {
           title: editMovie,
           rating: editRating,
+            genre: editGenre
         };
         const url = '/api/movies/' + id;
         const options = {
@@ -142,11 +171,12 @@ removeMovies();
 $('#removeSubmit').click(function(e){
   e.preventDefault();
   getMovies().then((moviesData) => {
-    moviesData.forEach(({title, rating, id}) => {
+    moviesData.forEach(({title, rating, genre, id}) => {
       if (removeMovie === title) {
         const submittedMovies = {
           title: title,
-          rating: rating
+          rating: rating,
+            genre: genre
         };
         const url = '/api/movies/' + id;
         const options = {
@@ -164,6 +194,17 @@ $('#removeSubmit').click(function(e){
     })
   })
 });
+
+//removes text after load
+
+// $("#movies").load(function() {
+//     $("#remove-on-load").hide();
+// });
+
+// $(document).ajaxSuccess(function() {
+//     $( "#remove-on-load" ).html( "Triggered ajaxSuccess handler." );
+// });
+
 
 
 
