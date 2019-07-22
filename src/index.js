@@ -32,7 +32,7 @@ const movies = () =>
   getMovies().then((movies) => {
   // console.log('Here are all the movies:');
   $('#movies').html ("");
-  let movieList = " <tr>\n" +
+  let movieList = "<tr>\n" +
       "<th>Movies</th>\n" +
       "<th>Rating</th>\n" +
       "<th>Genre</th>\n" + "</tr>";
@@ -237,6 +237,14 @@ $('#removeSubmit').click(function(e){
   })
 });
 
+let recommendationArr = ["Casablanca", "The Dark Knight", "The Godfather", "Schindler's List", "Star Wars: A New Hope", "The Exorcist"];
+
+$("#recommendation").on("click", function(e){
+    console.log(e)
+    let ourRecommendation = recommendationArr[Math.floor(Math.random() * recommendationArr.length)];
+    console.log(ourRecommendation)
+    $("#OFPCExclusive").text(ourRecommendation)
+});
 
 
 //removes text after load

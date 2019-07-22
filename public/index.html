@@ -61,18 +61,29 @@
                 <option class="genre" value="Horror">Horror</option>
             </select>
 
-            <button id="editSubmit" type="submit">Submit</button>
+            <button id="editSubmit" type="submit" disabled>Submit</button>
         </form>
         <form>
             <label for="removeMovies">Select a Movie to Remove</label>
             <select id="removeMovies" name="removeMovies"></select>
             <button id="removeSubmit" type="submit">Submit</button>
         </form>
-        <table id="movieCenter">
+    <hr>
+    <h2>OFPC Recommends...</h2>
+    <button id="recommendation" type="button">Recommend a Movie to Me!</button>
+    <h3 id="OFPCExclusive"></h3>
+    <br>
+    <hr>
+    <br>
+<div class = "row middleMovies">
+    <img class="col-4" src="swposter.jpg">
+    <table class="col-4 movieCenter">
             <tr id="movies">
                 <th><img src="./fixedloading.gif" alt="Loading, please Wait"></th>
             </tr>
         </table>
+    <img class="col-4" src="tdkposter.jpg">
+</div>
 </div>
 
 <footer id="bottomStuff"><img src="./fixedgiphy.gif" alt=""></footer>

@@ -83,6 +83,24 @@
       "rating": "4",
       "genre": "Action",
       "id": 14
+    },
+    {
+      "title": "The Green Lantern",
+      "rating": "2",
+      "genre": "Action",
+      "id": 15
+    },
+    {
+      "title": "The Twilight Saga",
+      "rating": "2",
+      "genre": "Romance",
+      "id": 16
+    },
+    {
+      "title": "Star Wars: Episode II - Attack of the Clones",
+      "rating": "2",
+      "genre": "Sci-Fi",
+      "id": 17
     }
   ]
 }
