@@ -1,17 +1,28 @@
-html, body {
-    height: 100%;
-}
-
 body{
     background-color: #427EE6;
+    background-image: url("movie-background.png");
+    background-size: cover;
+    height: 100%;
     color: #37403E;
     font-family: "Noto Sans JP", sans-serif;
 }
 
+html, body {
+    height: 100%;
+}
+h1 {
+    padding-top: 1em;
+}
+h1, h2 {
+    color: seashell;
+}
+form {
+    text-align: left;
+    color: seashell;
+}
+
 .container {
     position: relative;
-    /*top: 50%;*/
-    /*transform: translateY(-60%);*/
     text-align: center;
 }
 

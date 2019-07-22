@@ -2,105 +2,111 @@
   "movies": [
     {
       "title": "Casablanca",
-      "rating": "5",
+      "rating": "★★★★★",
       "genre": "Drama",
       "id": 1
     },
     {
       "title": "The Dark Knight",
-      "rating": "5",
+      "rating": "★★★★★",
       "id": 2,
       "genre": "Action"
     },
     {
       "title": "The Godfather",
-      "rating": "5",
+      "rating": "★★★★★",
       "genre": "Drama",
       "id": 3
     },
     {
       "title": "Schindler's List",
-      "rating": "5",
+      "rating": "★★★★★",
       "genre": "Drama",
       "id": 4
     },
     {
       "title": "Star Wars: A New Hope",
-      "rating": "5",
+      "rating": "★★★★★",
       "genre": "Sci-Fi",
       "id": 5
     },
     {
       "title": "The Hangover",
-      "rating": "4",
+      "rating": "★★★★",
       "genre": "Comedy",
       "id": 6
     },
     {
       "title": "The Lion King (2019)",
-      "rating": "3",
+      "rating": "★★★",
       "genre": "Nostalgia Bait",
       "id": 7
     },
     {
       "title": "Detective Pikachu",
-      "rating": "4",
+      "rating": "★★★★",
       "genre": "Nostalgia Bait",
       "id": 8
     },
     {
       "title": "Dirty Dancing",
-      "rating": "3",
+      "rating": "★★★★",
       "genre": "Romance",
       "id": 9
     },
     {
       "title": "The Exorcist",
-      "rating": "5",
+      "rating": "★★★★★",
       "genre": "Horror",
       "id": 10
     },
     {
       "title": "The Notebook",
-      "rating": "4",
+      "rating": "★★★★",
       "genre": "Romance",
       "id": 11
     },
     {
       "title": "It",
-      "rating": "4",
+      "rating": "★★★★",
       "genre": "Horror",
       "id": 12
     },
     {
       "title": "The Room",
-      "rating": "1",
+      "rating": "★",
       "genre": "Drama",
       "id": 13
     },
     {
       "title": "Avengers: Endgame",
-      "rating": "4",
+      "rating": "★★★★",
       "genre": "Action",
       "id": 14
     },
     {
       "title": "The Green Lantern",
-      "rating": "2",
+      "rating": "★★",
       "genre": "Action",
       "id": 15
     },
     {
-      "title": "The Twilight Saga",
-      "rating": "2",
-      "genre": "Romance",
-      "id": 16
-    },
-    {
       "title": "Star Wars: Episode II - Attack of the Clones",
-      "rating": "2",
+      "rating": "★★",
       "genre": "Sci-Fi",
       "id": 17
+    },
+    {
+      "title": "Twilight",
+      "rating": "★",
+      "genre": "Horror",
+      "id": 18
+    },
+    {
+      "title": "Serenity",
+      "rating": "★★★★",
+      "genre": "Sci-Fi",
+      "id": 19
     }
   ]
 }
