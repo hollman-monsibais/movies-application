@@ -21,16 +21,11 @@ let movieGenre;
 let editGenre;
 let removeMovie;
 
-//backup removal
-
-// setTimeout(function(){
-//     $('#remove-on-load').remove();
-// }, 3700);
+let recommendationArr = [];
 
 //populates Movie List
 const movies = () =>
   getMovies().then((movies) => {
-  // console.log('Here are all the movies:');
   $('#movies').html ("");
   let movieList = "<tr>\n" +
       "<th>Movies</th>\n" +
@@ -44,14 +39,20 @@ const movies = () =>
         movieList += '</tr>';
     console.log(`id#${id} - ${title} - rating: ${rating} -genre ${genre}`);
   });
-  $(movieList).appendTo('#movies')
+  $(movieList).appendTo('#movies');
+  for (var i = 0; i < movies.length; i++) {
+      if(movies[i].rating == 5){
+          recommendationArr.push(movies[i].title);
+      }
+  }
+      $("#ratingFilter").on("click", function(){
+              });
+
 }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.');
   console.log(error);
 });
 movies();
-
-
 
 //Movie rating function
 $("select#movieRating").change(function(){
@@ -59,24 +60,6 @@ $("select#movieRating").change(function(){
   // movieRating.then($("#submit").removeAttr("disabled"));
     });
 
-//disable button while request is working
-
-// $("#submit").click(function() {
-//     $("#submit").attr("disabled", true);
-//     $.ajax({
-//         url: 'http://localhost:8080/jQueryTest/test.json',
-//         data: {
-//             action: 'viewRekonInfo'
-//         },
-//         type: 'post',
-//         success: function(response){
-//             //success process here
-//             // $("#alertContainer").delay(1000).fadeOut(800);
-//             $("#submit").attr("disabled", false);
-//         },
-//         error: errorhandler,
-//         dataType: 'json'
-//     });
 
 //editing star ratings
 $("select#editRating").change(function(){
@@ -237,22 +220,15 @@ $('#removeSubmit').click(function(e){
   })
 });
 
-let recommendationArr = ["Casablanca", "The Dark Knight", "The Godfather", "Schindler's List", "Star Wars: A New Hope", "The Exorcist"];
+
 
 $("#recommendation").on("click", function(e){
-    console.log(e)
+    console.log(e);
     let ourRecommendation = recommendationArr[Math.floor(Math.random() * recommendationArr.length)];
-    console.log(ourRecommendation)
+    console.log(ourRecommendation);
     $("#OFPCExclusive").text(ourRecommendation)
 });
 
 
-//removes text after load
 
-// $("#movies").load(function() {
-//     $("#remove-on-load").hide();
-// });
 
-// $(document).ajaxSuccess(function() {
-//     $( "#remove-on-load" ).html( "Triggered ajaxSuccess handler." );
-// });
