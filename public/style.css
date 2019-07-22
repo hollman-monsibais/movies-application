@@ -11,3 +11,19 @@ html, body {
 .hide-on-load{
     display: none;
 }
+#movieCenter{
+    margin: auto;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .5);
+    background-color: #8EB7D8;
+    font-size: large;
+}
+
+#bottomStuff{
+    float: right;
+}
+body{
+    background-color: #427EE6;
+    color: #37403E;
+    font-family: "Noto Sans JP", sans-serif;
+}

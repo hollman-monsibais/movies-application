@@ -58,6 +58,9 @@ $("select#movieRating").change(function(){
   movieRating = $(this).children("option:selected").val();
   // movieRating.then($("#submit").removeAttr("disabled"));
     });
+
+//disable button while request is working
+
 // $("#submit").click(function() {
 //     $("#submit").attr("disabled", true);
 //     $.ajax({
@@ -95,9 +98,9 @@ $("select#editGenre").change(function(){
 
 
 $('form > input').change(function() {
-        var empty = false;
+        let empty = false;
         $('form > input').each(function() {
-            if ($(this).val() == '' || $(this).val() == "chooseHere") {
+            if ($(this).val() === '' || $(this).val() === "undefined") {
                 empty = true;
             }
         });
@@ -146,7 +149,7 @@ const editMovies = () =>
       movies.forEach(({title, rating}) => {
         movieEdit += `<option value="${title}">${title}</option>`;
       });
-      // $(movieEdit).appendTo('#editMovies').then($("#editSubmit").removeAttr("disabled"))
+      $(movieEdit).appendTo('#editMovies').then($("#editSubmit").removeAttr("disabled"))
     })
     //for editing movies option
         .then($("select#editMovies").change(function(){
@@ -245,21 +248,3 @@ $('#removeSubmit').click(function(e){
 // $(document).ajaxSuccess(function() {
 //     $( "#remove-on-load" ).html( "Triggered ajaxSuccess handler." );
 // });
-
-
-
-
-// const url = '../db.json';
-// const options = {
-//   method: 'GET',
-//   // movies,
-//   body: JSON.stringify(submittedMovies),
-//
-// };
-// fetch(url, options)
-// let html = ''
-
-//
-//       movies.forEach(function(movie){
-//
-//       }))
