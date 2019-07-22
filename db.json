@@ -25,18 +25,6 @@
       "id": 5
     },
     {
-      "title": "The Lion King (2019)",
-      "rating": "3",
-      "genre": "Nostalgia Bait",
-      "id": 6
-    },
-    {
-      "title": "John Wick",
-      "rating": "4",
-      "genre": "Action",
-      "id": 8
-    },
-    {
       "title": "Star Wars: A New Hope",
       "rating": "5",
       "genre": "Sci-Fi",
@@ -44,9 +32,57 @@
     },
     {
       "title": "The Hangover",
-      "rating": "5",
-      "genre": "Romance",
+      "rating": "4",
+      "genre": "Comedy",
       "id": 11
+    },
+    {
+      "title": "The Lion King (2019)",
+      "rating": "3",
+      "genre": "Nostalgia Bait",
+      "id": 12
+    },
+    {
+      "title": "Detective Pikachu",
+      "rating": "4",
+      "genre": "Nostalgia Bait",
+      "id": 13
+    },
+    {
+      "title": "Dirty Dancing",
+      "rating": "3",
+      "genre": "Romance",
+      "id": 14
+    },
+    {
+      "title": "The Exorcist",
+      "rating": "5",
+      "genre": "Horror",
+      "id": 15
+    },
+    {
+      "title": "The Notebook",
+      "rating": "4",
+      "genre": "Romance",
+      "id": 16
+    },
+    {
+      "title": "It",
+      "rating": "4",
+      "genre": "Horror",
+      "id": 17
+    },
+    {
+      "title": "The Room",
+      "rating": "1",
+      "genre": "Drama",
+      "id": 18
+    },
+    {
+      "title": "Avengers: Endgame",
+      "rating": "4",
+      "genre": "Action",
+      "id": 21
     }
   ]
 }

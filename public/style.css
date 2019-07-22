@@ -5,7 +5,7 @@ html, body {
 .container {
     position: relative;
     top: 50%;
-    transform: translateY(-80%);
+    transform: translateY(-60%);
     text-align: center;
 }
 .hide-on-load{

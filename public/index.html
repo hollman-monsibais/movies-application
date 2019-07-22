@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>My Application</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div class= "container">
@@ -14,7 +14,7 @@
             <input id="movieName" type="text">
             <label for="movieRating">Select a Rating</label>
             <select id="movieRating" name="movieRating">
-                <option value=""selected hidden>Choose here</option>
+                <option value="chooseHere"selected hidden>Choose here</option>
                 <option class="star" value="1">One Star</option>
                 <option class="star" value="2">Two Stars</option>
                 <option class="star" value="3">Three Stars</option>
@@ -23,15 +23,16 @@
             </select>
             <label for="movieGenre">Select a Genre</label>
             <select id="movieGenre" name="movieGenre">
-                <option value=""selected disabled hidden>Choose here</option>
-                <option class="genre" value="sci-fi">sci-fi</option>
-                <option class="genre" value="comedy">comedy</option>
-                <option class="genre" value="drama">drama</option>
-                <option class="genre" value="action">action</option>
-                <option class="genre" value="nostalgia bait">nostalgia bait</option>
-                <option class="genre" value="romance">romance</option>
+                <option value="chooseHere"selected disabled hidden>Choose here</option>
+                <option class="genre" value="Sci-Fi">Sci-Fi</option>
+                <option class="genre" value="Comedy">Comedy</option>
+                <option class="genre" value="Drama">Drama</option>
+                <option class="genre" value="Action">Action</option>
+                <option class="genre" value="Nostalgia Bait">Nostalgia Bait</option>
+                <option class="genre" value="Romance">Romance</option>
+                <option class="genre" value="Horror">Horror</option>
             </select>
-            <button id="submit" type="submit">Submit</button>
+            <button id="submit" type="submit" disabled>Submit</button>
         </form>
         <form>
             <label for="editMovies">Select a Movie to Edit</label>
@@ -50,15 +51,16 @@
             <label for="editGenre">Select a Genre</label>
             <select id="editGenre" name="editGenre">
                 <option value=""selected disabled hidden>Choose here</option>
-                <option class="genre" value="sci-fi">Sci-Fi</option>
-                <option class="genre" value="comedy">Comedy</option>
-                <option class="genre" value="drama">Drama</option>
-                <option class="genre" value="action">Action</option>
-                <option class="genre" value="nostalgia bait">Nostalgia Bait</option>
-                <option class="genre" value="romance">Romance</option>
+                <option class="genre" value="Sci-Fi">Sci-Fi</option>
+                <option class="genre" value="Comedy">Comedy</option>
+                <option class="genre" value="Drama">Drama</option>
+                <option class="genre" value="Action">Action</option>
+                <option class="genre" value="Nostalgia Bait">Nostalgia Bait</option>
+                <option class="genre" value="Romance">Romance</option>
+                <option class="genre" value="Horror">Horror</option>
             </select>
 
-            <button id="editSubmit" type="submit" disabled>Submit</button>
+            <button id="editSubmit" type="submit">Submit</button>
         </form>
         <form>
             <label for="removeMovies">Select a Movie to Remove</label>
@@ -71,6 +73,7 @@
             </tr>
         </table>
 </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

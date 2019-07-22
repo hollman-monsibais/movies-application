@@ -10,16 +10,16 @@ sayHello('World');
 const {getMovies} = require('./api.js');
 const $ = require('jquery');
 
-let editMovie;
+
+
+
+
+
 let movieRating;
 let editRating;
-let removeMovie;
 let movieGenre;
 let editGenre;
-
-$("#remove-on-load").ajaxComplete(function(){
-    $("#remove-on-load").css("display", "none");
-});
+let removeMovie;
 
 //backup removal
 
@@ -51,11 +51,29 @@ const movies = () =>
 });
 movies();
 
+
+
 //Movie rating function
 $("select#movieRating").change(function(){
   movieRating = $(this).children("option:selected").val();
-  movieRating.then($("#submit").removeAttr("disabled"));
-});
+  // movieRating.then($("#submit").removeAttr("disabled"));
+    });
+// $("#submit").click(function() {
+//     $("#submit").attr("disabled", true);
+//     $.ajax({
+//         url: 'http://localhost:8080/jQueryTest/test.json',
+//         data: {
+//             action: 'viewRekonInfo'
+//         },
+//         type: 'post',
+//         success: function(response){
+//             //success process here
+//             // $("#alertContainer").delay(1000).fadeOut(800);
+//             $("#submit").attr("disabled", false);
+//         },
+//         error: errorhandler,
+//         dataType: 'json'
+//     });
 
 //editing star ratings
 $("select#editRating").change(function(){
@@ -63,14 +81,32 @@ $("select#editRating").change(function(){
 });
 
 //adding genre
+
 $("select#movieGenre").change(function(){
     movieGenre = $(this).children("option:selected").val();
 });
 
 //editing genre
+
 $("select#editGenre").change(function(){
     editGenre = $(this).children("option:selected").val();
 });
+
+
+
+$('form > input').change(function() {
+        var empty = false;
+        $('form > input').each(function() {
+            if ($(this).val() == '' || $(this).val() == "chooseHere") {
+                empty = true;
+            }
+        });
+        if (empty) {
+            $('#submit').attr('disabled', 'disabled');
+        } else {
+            $('#submit').removeAttr('disabled');
+        }
+    });
 
 //updating movie list
 $('#submit').click(function(e){
@@ -99,7 +135,9 @@ $('#submit').click(function(e){
 });
 
 
+
 //edit rating for movies
+let editMovie;
 const editMovies = () =>
     getMovies().then((movies) => {
       console.log("Can you see the movies?");
@@ -108,7 +146,7 @@ const editMovies = () =>
       movies.forEach(({title, rating}) => {
         movieEdit += `<option value="${title}">${title}</option>`;
       });
-      $(movieEdit).appendTo('#editMovies').then($("#editSubmit").removeAttr("disabled"))
+      // $(movieEdit).appendTo('#editMovies').then($("#editSubmit").removeAttr("disabled"))
     })
     //for editing movies option
         .then($("select#editMovies").change(function(){
@@ -149,10 +187,11 @@ $('#editSubmit').click(function (e) {
 });
 
 //Movie deletion
+
 const removeMovies = () =>
     getMovies().then((movies) => {
       $('#removeMovies').html('');
-      let movieDelete = "<option>Select the Movie You Want to Remove</option>";
+      let movieDelete = "<option>Select a Movie</option>";
       movies.forEach(({title, rating, id}) => {
         movieDelete += `<option value="${title}">${title}</option>`;
       });
@@ -195,6 +234,8 @@ $('#removeSubmit').click(function(e){
   })
 });
 
+
+
 //removes text after load
 
 // $("#movies").load(function() {
@@ -212,7 +253,7 @@ $('#removeSubmit').click(function(e){
 // const options = {
 //   method: 'GET',
 //   // movies,
-//   body: JSON.stringify(getMovies),
+//   body: JSON.stringify(submittedMovies),
 //
 // };
 // fetch(url, options)
