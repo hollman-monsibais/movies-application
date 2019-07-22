@@ -3,49 +3,49 @@
     {
       "title": "Casablanca",
       "rating": "5",
-      "genre": "drama",
+      "genre": "Drama",
       "id": 1
     },
     {
       "title": "The Dark Knight",
       "rating": "5",
       "id": 3,
-      "genre": "action"
+      "genre": "Action"
     },
     {
       "title": "The Godfather",
       "rating": "5",
-      "genre": "drama",
+      "genre": "Drama",
       "id": 4
     },
     {
       "title": "Schindler's List",
       "rating": "5",
-      "genre": "drama",
+      "genre": "Drama",
       "id": 5
     },
     {
       "title": "The Lion King (2019)",
-      "rating": "2",
-      "genre": "nostalgia bait",
+      "rating": "3",
+      "genre": "Nostalgia Bait",
       "id": 6
     },
     {
       "title": "John Wick",
       "rating": "4",
-      "genre": "action",
+      "genre": "Action",
       "id": 8
     },
     {
       "title": "Star Wars: A New Hope",
       "rating": "5",
-      "genre": "sci-fi",
+      "genre": "Sci-Fi",
       "id": 10
     },
     {
       "title": "The Hangover",
       "rating": "5",
-      "genre": "romance",
+      "genre": "Romance",
       "id": 11
     }
   ]
