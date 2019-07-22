@@ -3,50 +3,86 @@
     {
       "title": "Casablanca",
       "rating": "5",
-      "genre": "drama",
+      "genre": "Drama",
       "id": 1
     },
     {
       "title": "The Dark Knight",
       "rating": "5",
       "id": 3,
-      "genre": "action"
+      "genre": "Action"
     },
     {
       "title": "The Godfather",
       "rating": "5",
-      "genre": "drama",
+      "genre": "Drama",
       "id": 4
     },
     {
       "title": "Schindler's List",
       "rating": "5",
-      "genre": "drama",
+      "genre": "Drama",
       "id": 5
-    },
-    {
-      "title": "The Lion King (2019)",
-      "rating": "2",
-      "genre": "nostalgia bait",
-      "id": 6
-    },
-    {
-      "title": "John Wick",
-      "rating": "4",
-      "genre": "action",
-      "id": 8
     },
     {
       "title": "Star Wars: A New Hope",
       "rating": "5",
-      "genre": "sci-fi",
+      "genre": "Sci-Fi",
       "id": 10
     },
     {
       "title": "The Hangover",
-      "rating": "5",
-      "genre": "romance",
+      "rating": "4",
+      "genre": "Comedy",
       "id": 11
+    },
+    {
+      "title": "The Lion King (2019)",
+      "rating": "3",
+      "genre": "Nostalgia Bait",
+      "id": 12
+    },
+    {
+      "title": "Detective Pikachu",
+      "rating": "4",
+      "genre": "Nostalgia Bait",
+      "id": 13
+    },
+    {
+      "title": "Dirty Dancing",
+      "rating": "3",
+      "genre": "Romance",
+      "id": 14
+    },
+    {
+      "title": "The Exorcist",
+      "rating": "5",
+      "genre": "Horror",
+      "id": 15
+    },
+    {
+      "title": "The Notebook",
+      "rating": "4",
+      "genre": "Romance",
+      "id": 16
+    },
+    {
+      "title": "It",
+      "rating": "4",
+      "genre": "Horror",
+      "id": 17
+    },
+    {
+      "title": "The Room",
+      "rating": "1",
+      "genre": "Drama",
+      "id": 18
+    },
+    {
+      "title": "Avengers: Endgame",
+      "rating": "4",
+      "genre": "Action",
+      "id": 21
     }
   ]
 }
