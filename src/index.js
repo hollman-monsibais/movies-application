@@ -68,7 +68,7 @@ const movies = () =>
   });
   $(movieList).appendTo('#movies');
       for (var i = 0; i < movies.length; i++) {
-          if(movies[i].rating == "&#11088;&#11088;&#11088;&#11088;&#11088;"){
+          if(movies[i].rating == "⭐⭐⭐⭐⭐"){
               recommendationArr.push(movies[i].title);
           }
       }
@@ -81,7 +81,7 @@ movies();
 //Movie rating function
 $("select#movieRating").change(function(){
   movieRating = $(this).children("option:selected").val();
-  // movieRating.then($("#submit").removeAttr("disabled"));
+  movieRating.then($("#submit").removeAttr("disabled"));
     });
 
 
@@ -104,19 +104,19 @@ $("select#editGenre").change(function(){
 
 
 
-$('form > input').change(function() {
-        let empty = false;
-        $('form > input').each(function() {
-            if ($(this).val() === '' || $(this).val() === "undefined") {
-                empty = true;
-            }
-        });
-        if (empty) {
-            $('#submit').attr('disabled', 'disabled');
-        } else {
-            $('#submit').removeAttr('disabled');
-        }
-    });
+// $('form > input').change(function() {
+//         let empty = false;
+//         $('form > input').forEach(function() {
+//             if ($(this).val() === '' || $(this).val() === "undefined") {
+//                 empty = true;
+//             }
+//         });
+//         if (empty) {
+//             $('#submit').attr('disabled', 'disabled');
+//         } else {
+//             $('#submit').removeAttr('disabled');
+//         }
+//     });
 
 //updating movie list
 $('#submit').click(function(e){
@@ -156,7 +156,7 @@ const editMovies = () =>
       movies.forEach(({title, rating}) => {
         movieEdit += `<option value="${title}">${title}</option>`;
       });
-      $(movieEdit).appendTo('#editMovies').then($("#editSubmit").removeAttr("disabled"))
+      $(movieEdit).appendTo('#editMovies');
     })
     //for editing movies option
         .then($("select#editMovies").change(function(){
@@ -167,6 +167,9 @@ const editMovies = () =>
           console.log(error);
         });
 editMovies();
+// if(editMovie && editGenre && editRating === true){
+// .then($("#editSubmit").removeAttr("disabled"));
+// };
 
 //update with new rating
 $('#editSubmit').click(function (e) {
@@ -250,7 +253,7 @@ $("#recommendation").on("click", function(e){
     console.log(e);
     let ourRecommendation = recommendationArr[Math.floor(Math.random() * recommendationArr.length)];
     console.log(ourRecommendation);
-    $("#OFPCExclusive").text(ourRecommendation)
+    $("#OFPCExclusive").text(ourRecommendation).css("color", "seashell");
 });
 
 
