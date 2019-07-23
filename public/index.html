@@ -4,16 +4,18 @@
     <meta charset="UTF-8" />
     <title>My Application</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href=“https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap” rel=“stylesheet”>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div class= "container">
         <h1>Welcome to Online Film Particularity Component</h1>
     <hr>
+    <div class="sidebar">
         <form method="POST">
             <label for="movieName">Enter a Movie Title</label>
             <input id="movieName" type="text">
+            <br>
             <label for="movieRating">Select a Rating</label>
             <select id="movieRating" name="movieRating">
                 <option value="chooseHere"selected hidden>Choose here</option>
@@ -23,6 +25,7 @@
                 <option class="star" value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
                 <option class="star" value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
             </select>
+            <br>
             <label for="movieGenre">Select a Genre</label>
             <select id="movieGenre" name="movieGenre">
                 <option value="chooseHere"selected disabled hidden>Choose here</option>
@@ -36,6 +39,7 @@
             </select>
             <button id="submit" type="submit" disabled ="disabled">Submit</button>
         </form>
+        <hr>
         <form>
             <label for="editMovies">Select a Movie to Edit</label>
             <select name="editMovies" id="editMovies"></select>
@@ -64,15 +68,19 @@
 
             <button id="editSubmit" type="submit" disabled="disabled">Submit</button>
         </form>
+        <hr>
         <form>
             <label for="removeMovies">Select a Movie to Remove</label>
             <select id="removeMovies" name="removeMovies"></select>
             <button id="removeSubmit" type="submit">Submit</button>
         </form>
+    </div>
     <hr>
+    <div class="main">
     <h2>OFPC Recommends...</h2>
     <button id="recommendation" type="button">Recommend a Movie to Me!</button>
-    <h3 id="OFPCExclusive"></h3>
+        <p></p>
+    <h2 id="OFPCExclusive"></h2>
     <hr>
 
 <div class = "row middleMovies">
@@ -84,6 +92,7 @@
         </table>
     <img class="col-4" src="tdkposter.jpg">
 </div>
+    </div>
 </div>
 
 <footer id="bottomStuff"><img src="./fixedgiphy.gif" alt=""></footer>
