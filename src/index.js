@@ -7,12 +7,8 @@ sayHello('World');
 /**
  * require style imports
  */
-const {getMovies} = require('./api.js');
+const {getMovies, getCinema} = require('./api.js');
 const $ = require('jquery');
-
-
-
-
 
 
 let movieRating;
@@ -26,63 +22,41 @@ let recommendationArr = [];
 //populates Movie List
 const movies = () =>
   getMovies().then((movies) => {
-      $("#movieFilter").on("click", movies.sort(function(a, b){
-          if (a.title < b.title){
-              return -1;
-          } else if (a.title > b.title){
-            return 1;
-      } else {
-              return 0;
+
+      $('#movies').html ("");
+      let movieList = "<tr>\n" +
+          "<th>Movies</th>\n" +
+          "<th>Rating</th>\n" +
+          "<th>Genre</th>\n" + "</tr>";
+      movies.forEach(({title, rating, genre, id}) => {
+            movieList += '<tr>';
+              movieList += `<td>${title}</td>`;
+              movieList += `<td>${rating}</td>`;
+              movieList += `<td>${genre}</td>`;
+            movieList += '</tr>';
+        console.log(`id#${id} - ${title} - rating: ${rating} -genre ${genre}`);
+      });
+
+      $(movieList).appendTo('#movies');
+          for (var i = 0; i < movies.length; i++) {
+              if(movies[i].rating == "⭐⭐⭐⭐⭐"){
+                  recommendationArr.push(movies[i].title);
+              }
           }
-      }));
-      $("#ratingFilter").on("click", movies.sort(function(a, b){
-          if (a.rating < b.rating){
-              return -1;
-          } else if (a.rating > b.rating){
-              return 1;
-          } else {
-              return 0;
-          }
-      }));
-      $("#genreFilter").on("click", movies.sort(function(a, b){
-          if (a.genre < b.genre){
-              return -1;
-          } else if (a.genre > b.genre){
-              return 1;
-          } else {
-              return 0;
-          }
-      }));
-  $('#movies').html ("");
-  let movieList = "<tr>\n" +
-      "<th>Movies</th>\n" +
-      "<th>Rating</th>\n" +
-      "<th>Genre</th>\n" + "</tr>";
-  movies.forEach(({title, rating, genre, id}) => {
-        movieList += '<tr>';
-          movieList += `<td>${title}</td>`;
-          movieList += `<td>${rating}</td>`;
-          movieList += `<td>${genre}</td>`;
-        movieList += '</tr>';
-    console.log(`id#${id} - ${title} - rating: ${rating} -genre ${genre}`);
-  });
-  $(movieList).appendTo('#movies');
-      for (var i = 0; i < movies.length; i++) {
-          if(movies[i].rating == "⭐⭐⭐⭐⭐"){
-              recommendationArr.push(movies[i].title);
-          }
-      }
+
 }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.');
   console.log(error);
 });
 movies();
 
+
+
 //Movie rating function
 $("select#movieRating").change(function(){
   movieRating = $(this).children("option:selected").val();
-  movieRating.then($("#submit").removeAttr("disabled"));
-    });
+  // movieRating.then($("#submit").removeAttr("disabled"));
+});
 
 
 //editing star ratings
@@ -90,33 +64,21 @@ $("select#editRating").change(function(){
   editRating = $(this).children("option:selected").val();
 });
 
+
 //adding genre
 
 $("select#movieGenre").change(function(){
     movieGenre = $(this).children("option:selected").val();
+    movieGenre.then($("#submit").removeAttr("disabled"));
 });
 
 //editing genre
 
 $("select#editGenre").change(function(){
     editGenre = $(this).children("option:selected").val();
+    editGenre.then($("#editSubmit").removeAttr("disabled"));
 });
 
-
-
-// $('form > input').change(function() {
-//         let empty = false;
-//         $('form > input').forEach(function() {
-//             if ($(this).val() === '' || $(this).val() === "undefined") {
-//                 empty = true;
-//             }
-//         });
-//         if (empty) {
-//             $('#submit').attr('disabled', 'disabled');
-//         } else {
-//             $('#submit').removeAttr('disabled');
-//         }
-//     });
 
 //updating movie list
 $('#submit').click(function(e){
@@ -143,7 +105,6 @@ $('#submit').click(function(e){
   $('#movieRating').val('');
   $('#movieGenre').val('');
 });
-
 
 
 //edit rating for movies
