@@ -26,33 +26,33 @@ let recommendationArr = [];
 //populates Movie List
 const movies = () =>
   getMovies().then((movies) => {
-  //     $("#movieFilter").on("click", movies.sort(function(a, b){
-  //         if (a.title < b.title){
-  //             return -1;
-  //         } else if (a.title > b.title){
-  //           return 1;
-  //     } else {
-  //             return 0;
-  //         }
-  //     }));
-  //     $("#ratingFilter").on("click", movies.sort(function(a, b){
-  //         if (a.rating < b.rating){
-  //             return -1;
-  //         } else if (a.rating > b.rating){
-  //             return 1;
-  //         } else {
-  //             return 0;
-  //         }
-  //     }));
-  //     $("#genreFilter").on("click", movies.sort(function(a, b){
-  //         if (a.genre < b.genre){
-  //             return -1;
-  //         } else if (a.genre > b.genre){
-  //             return 1;
-  //         } else {
-  //             return 0;
-  //         }
-  //     }));
+      $("#movieFilter").on("click", movies.sort(function(a, b){
+          if (a.title < b.title){
+              return -1;
+          } else if (a.title > b.title){
+            return 1;
+      } else {
+              return 0;
+          }
+      }));
+      $("#ratingFilter").on("click", movies.sort(function(a, b){
+          if (a.rating < b.rating){
+              return -1;
+          } else if (a.rating > b.rating){
+              return 1;
+          } else {
+              return 0;
+          }
+      }));
+      $("#genreFilter").on("click", movies.sort(function(a, b){
+          if (a.genre < b.genre){
+              return -1;
+          } else if (a.genre > b.genre){
+              return 1;
+          } else {
+              return 0;
+          }
+      }));
   $('#movies').html ("");
   let movieList = "<tr>\n" +
       "<th>Movies</th>\n" +
@@ -68,7 +68,7 @@ const movies = () =>
   });
   $(movieList).appendTo('#movies');
       for (var i = 0; i < movies.length; i++) {
-          if(movies[i].rating == "★★★★★"){
+          if(movies[i].rating == "&#11088;&#11088;&#11088;&#11088;&#11088;"){
               recommendationArr.push(movies[i].title);
           }
       }

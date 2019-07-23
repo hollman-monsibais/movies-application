@@ -13,7 +13,7 @@ html, body {
 h1 {
     padding-top: 1em;
 }
-h1, h2 {
+h1, h2, p {
     color: seashell;
 }
 form {
@@ -40,11 +40,6 @@ form {
     background-color: #8EB7D8;
     font-size: large;
     /*left: 50%;*/
-}
-.tbody {
-    /*margin: 0 auto;*/
-    /*text-align: center;*/
-
 }
 
 .tr{

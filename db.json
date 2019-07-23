@@ -2,109 +2,109 @@
   "movies": [
     {
       "title": "Casablanca",
-      "rating": "★★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
       "genre": "Drama",
       "id": 1
     },
     {
       "title": "The Dark Knight",
-      "rating": "★★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
       "id": 2,
       "genre": "Action"
     },
     {
       "title": "The Godfather",
-      "rating": "★★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
       "genre": "Drama",
       "id": 3
     },
     {
       "title": "Schindler's List",
-      "rating": "★★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
       "genre": "Drama",
       "id": 4
     },
     {
       "title": "Star Wars: A New Hope",
-      "rating": "★★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
       "genre": "Sci-Fi",
       "id": 5
     },
     {
       "title": "The Hangover",
-      "rating": "★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;",
       "genre": "Comedy",
       "id": 6
     },
     {
       "title": "The Lion King (2019)",
-      "rating": "★★★",
+      "rating": "&#11088;&#11088;&#11088;",
       "genre": "Nostalgia Bait",
       "id": 7
     },
     {
       "title": "Detective Pikachu",
-      "rating": "★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;",
       "genre": "Nostalgia Bait",
       "id": 8
     },
     {
       "title": "Dirty Dancing",
-      "rating": "★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;",
       "genre": "Romance",
       "id": 9
     },
     {
       "title": "The Exorcist",
-      "rating": "★★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;&#11088;",
       "genre": "Horror",
       "id": 10
     },
     {
       "title": "The Notebook",
-      "rating": "★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;",
       "genre": "Romance",
       "id": 11
     },
     {
       "title": "It",
-      "rating": "★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;",
       "genre": "Horror",
       "id": 12
     },
     {
       "title": "The Room",
-      "rating": "★",
+      "rating": "&#11088;",
       "genre": "Drama",
       "id": 13
     },
     {
       "title": "Avengers: Endgame",
-      "rating": "★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;",
       "genre": "Action",
       "id": 14
     },
     {
       "title": "The Green Lantern",
-      "rating": "★★",
+      "rating": "&#11088;&#11088;",
       "genre": "Action",
       "id": 15
     },
     {
       "title": "Star Wars: Episode II - Attack of the Clones",
-      "rating": "★★",
+      "rating": "&#11088;&#11088;",
       "genre": "Sci-Fi",
       "id": 17
     },
     {
       "title": "Twilight",
-      "rating": "★",
+      "rating": "&#11088;",
       "genre": "Horror",
       "id": 18
     },
     {
       "title": "Serenity",
-      "rating": "★★★★",
+      "rating": "&#11088;&#11088;&#11088;&#11088;",
       "genre": "Sci-Fi",
       "id": 19
     }
