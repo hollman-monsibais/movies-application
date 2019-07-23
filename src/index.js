@@ -64,7 +64,6 @@ $("select#editRating").change(function(){
   editRating = $(this).children("option:selected").val();
 });
 
-
 //adding genre
 
 $("select#movieGenre").change(function(){
