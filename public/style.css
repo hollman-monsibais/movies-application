@@ -1,17 +1,28 @@
-html, body {
-    height: 100%;
-}
-
 body{
     background-color: #427EE6;
+    background-image: url("movie-background.png");
+    background-size: cover;
+    height: 100%;
     color: #37403E;
     font-family: "Noto Sans JP", sans-serif;
 }
 
+html, body {
+    height: 100%;
+}
+h1 {
+    padding-top: 1em;
+}
+h1, h2, p {
+    color: seashell;
+}
+form {
+    text-align: left;
+    color: seashell;
+}
+
 .container {
     position: relative;
-    /*top: 50%;*/
-    /*transform: translateY(-60%);*/
     text-align: center;
 }
 
@@ -29,11 +40,6 @@ body{
     background-color: #8EB7D8;
     font-size: large;
     /*left: 50%;*/
-}
-.tbody {
-    /*margin: 0 auto;*/
-    /*text-align: center;*/
-
 }
 
 .tr{
