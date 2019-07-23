@@ -2,7 +2,7 @@
   "movies": [
     {
       "title": "Casablanca",
-      "rating": "⭐⭐⭐⭐",
+      "rating": "⭐⭐⭐⭐⭐",
       "genre": "Drama",
       "id": 1
     },
@@ -50,7 +50,7 @@
     },
     {
       "title": "Dirty Dancing",
-      "rating": "⭐⭐⭐",
+      "rating": "⭐⭐⭐⭐",
       "genre": "Romance",
       "id": 9
     },
@@ -85,12 +85,6 @@
       "id": 14
     },
     {
-      "title": "The Green Lantern",
-      "rating": "⭐⭐",
-      "genre": "Action",
-      "id": 15
-    },
-    {
       "title": "Twilight",
       "rating": "⭐",
       "genre": "Horror",
@@ -101,6 +95,12 @@
       "rating": "⭐⭐⭐⭐",
       "genre": "Sci-Fi",
       "id": 19
+    },
+    {
+      "title": "Green Lantern",
+      "rating": "⭐⭐",
+      "genre": "Action",
+      "id": 20
     }
   ]
 }
