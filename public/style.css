@@ -15,7 +15,7 @@ h1 {
     font-size: 3.5em;
     font-family: "Noto Sans JP", sans-serif;
 }
-h1, h2, p {
+h1, h2 {
     color: seashell;
 }
 form {
@@ -50,20 +50,21 @@ form {
     display: none;
 }
 
-.middleMovies{
-    width: 100%;
-}
+/*.middleMovies{*/
+/*    width: 100%;*/
+/*}*/
 .movieCenter {
     box-sizing: border-box;
     box-shadow: 0 -1px 10px rgba(0, 0, 0, .5);
     background-color: #8EB7D8;
+    color: black;
     font-size: large;
     font-family: "Noto Sans JP", sans-serif;
 }
 
-.tr{
-    padding: 1em;
-}
+/*.tr{*/
+/*    padding: 1em;*/
+/*}*/
 
 #bottomStuff{
     float: right;

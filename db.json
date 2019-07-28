@@ -2,7 +2,7 @@
   "movies": [
     {
       "title": "Casablanca",
-      "rating": "⭐⭐⭐⭐",
+      "rating": "⭐⭐⭐⭐⭐",
       "genre": "Drama",
       "id": 1
     },
@@ -49,12 +49,6 @@
       "id": 8
     },
     {
-      "title": "Dirty Dancing",
-      "rating": "⭐⭐⭐⭐",
-      "genre": "Romance",
-      "id": 9
-    },
-    {
       "title": "The Exorcist",
       "rating": "⭐⭐⭐⭐⭐",
       "genre": "Horror",
@@ -87,7 +81,7 @@
     {
       "title": "Twilight",
       "rating": "⭐",
-      "genre": "Horror",
+      "genre": "Romance",
       "id": 18
     },
     {
@@ -101,6 +95,12 @@
       "rating": "⭐⭐",
       "genre": "Action",
       "id": 20
+    },
+    {
+      "title": "Shawshank Redemption",
+      "rating": "⭐⭐⭐⭐⭐",
+      "genre": "Drama",
+      "id": 21
     }
   ]
 }

@@ -17,23 +17,26 @@ let movieGenre;
 let editGenre;
 let removeMovie;
 
+let omdbKey = omdbKey;
+
 let recommendationArr = [];
 
 //populates Movie List
 const movies = () =>
   getMovies().then((movies) => {
-
       $('#movies').html ("");
-      let movieList = "<tr>\n" +
-          "<th>Movies</th>\n" +
-          "<th>Rating</th>\n" +
-          "<th>Genre</th>\n" + "</tr>";
-      movies.forEach(({title, rating, genre, id}) => {
-            movieList += '<tr>';
-              movieList += `<td>${title}</td>`;
-              movieList += `<td>${rating}</td>`;
-              movieList += `<td>${genre}</td>`;
-            movieList += '</tr>';
+      let movieList = "";
+      movies.forEach(({title, rating, genre, poster, id}) => {
+          movieList += `<div class = col-4>`;
+            movieList += '<div class = card>';
+                movieList += `<div class= card-body>`;
+                  movieList += `<p>${title}</p>`;
+                  movieList += `<p>${rating}</p>`;
+                  movieList += `<p>${genre}</p>`;
+                  movieList += `<p><img src="${poster}" alt="movie-poster"></p>`;
+                  movieList += `</div>`;
+            movieList += '</div>';
+          movieList += '</div>';
         console.log(`id#${id} - ${title} - rating: ${rating} -genre ${genre}`);
       });
 
@@ -83,26 +86,33 @@ $("select#editGenre").change(function(){
 $('#submit').click(function(e){
   e.preventDefault();
   const movieTitle = $('#movieName').val();
-  const submittedMovies = {
-    title: movieTitle,
-    rating: movieRating,
-      genre: movieGenre
-  };
-  const url = '/api/movies';
-  const options = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(submittedMovies)
-  };
-  fetch(url, options)
-      .then(movies)
-      .then(editMovies)
-      .then(removeMovies);
-  $('#movieName').val('');
-  $('#movieRating').val('');
-  $('#movieGenre').val('');
+  let poster;
+  return fetch(`http://www.omdbapi.com/?s=${movieTitle}&r=json&apikey=` + `omdbKey`)
+    .then(response => response.json())
+        .then(data => {
+            poster = data.Search[0].Poster;
+            let submittedMovies = {
+                title: movieTitle,
+                rating: movieRating,
+                genre: movieGenre,
+                poster: poster
+            };
+            const url = '/api/movies';
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(submittedMovies)
+            };
+            fetch(url, options)
+                .then(movies)
+                .then(editMovies)
+                .then(removeMovies);
+            $('#movieName').val('');
+            $('#movieRating').val('');
+            $('#movieGenre').val('');
+        });
 });
 
 
