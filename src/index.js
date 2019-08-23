@@ -27,9 +27,9 @@ const movies = () =>
       $('#movies').html ("");
       let movieList = "";
       movies.forEach(({title, rating, genre, poster, id}) => {
-          movieList += `<div class = col-4>`;
-            movieList += '<div class = card>';
-                movieList += `<div class= card-body>`;
+          // movieList += `<div class = "uk-col-1-3">`;
+            movieList += '<div class = "uk-card uk-width-1-3">';
+                movieList += `<div class= "uk-card-body">`;
                   movieList += `<p>${title}</p>`;
                   movieList += `<p>${rating}</p>`;
                   movieList += `<p>${genre}</p>`;
@@ -223,7 +223,7 @@ $("#recommendation").on("click", function(e){
     console.log(e);
     let ourRecommendation = recommendationArr[Math.floor(Math.random() * recommendationArr.length)];
     console.log(ourRecommendation);
-    $("#OFPCExclusive").text(ourRecommendation).css("color", "seashell");
+    $("#OFPCExclusive").text(ourRecommendation).css("color", "#6bafcf");
 });
 
 

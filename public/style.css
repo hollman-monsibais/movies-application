@@ -1,59 +1,79 @@
-body{
-    background-color: #427EE6;
-    background-image: url("movie-background.png");
-    background-size: cover;
-    height: 100%;
-    color: #37403E;
-    font-family: 'Montserrat', sans-serif;
-}
-
 html, body {
     height: 100%;
+}
+body{
+    color: #2b6f8f;
+    font-family: 'Montserrat', sans-serif;
 }
 h1 {
     padding-top: 1em;
     font-size: 3.5em;
     font-family: "Noto Sans JP", sans-serif;
+    /*color: #6bafcf;*/
 }
 h1, h2 {
-    color: seashell;
+    color: #6bafcf;
 }
 form {
     text-align: left;
-    color: seashell;
+    color: #45b7ed;
+    /*font-weight: bold;*/
+
 }
 
-.container {
+.background{
+    background-color: #427EE6;
+    background-image: url("filmreel2.png");
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.uk-container {
     position: relative;
     text-align: center;
+}
+.topStuff {
+    margin: 40px 25px 25px 25px;
+}
+
+.OFPCExclusive {
+    color: #6bafcf;
 }
 .sidebar {
     height: 100%;
     width: 200px;
-    position: fixed;
+    position: static;
     z-index: 1;
     top: 0;
     left: 0;
     display: block;
-    /*background-color: #111;*/
+    background-color: rgba(17, 17, 17, 0.7);
     overflow-x: hidden;
     /*transition: 0.5s;*/
-    padding-top: 160px;
+    /*margin-top: 160px;*/
     padding-left: 8px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    border: 1px #45b7ed groove;
+}
+.uk-button-small {
+    border: 1px #45b7ed ridge;
+    color: #45b7ed;
 }
 .main {
     margin-left: 160px;
-    padding: 0px 10px;
+    padding: 0 10px;
 }
 
 .hide-on-load{
     display: none;
 }
 
-/*.middleMovies{*/
-/*    width: 100%;*/
-/*}*/
+
+
 .movieCenter {
+    margin-left: 65px;
+    margin-right: 20px;
     box-sizing: border-box;
     box-shadow: 0 -1px 10px rgba(0, 0, 0, .5);
     background-color: #8EB7D8;
@@ -61,10 +81,6 @@ form {
     font-size: large;
     font-family: "Noto Sans JP", sans-serif;
 }
-
-/*.tr{*/
-/*    padding: 1em;*/
-/*}*/
 
 #bottomStuff{
     float: right;
